@@ -1,24 +1,42 @@
 <html>
+    <head>
+        <style>
 
-<head>
+        h1{
+            text-align: center;
+            font-size:30px
+        }
+        
+        .item1 { grid-area: menu; }
+        .item2 { grid-area: main; }
+        .item3 { grid-area: menu_2; }
 
-</head>
-
-<body>
-
-    <button onclick = "link()">click me</button>
-    
-    <p id="sin">i am in hell</p>
-
-    <script>
-        function link(){
-            document.getElementByID("link").innerHTML = "maybe not"
+        .grid-container {
+        display: grid;
+        grid-template-areas:
+            'menu main menu_2'
+            'menu main menu_2'
         }
 
-    </script>
+        .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 20px;
+        }
+        </style>
+    </head>
+    <body>
 
-</body>
+    <h1>Slay</h1>
 
+        <p>This is the most difficult thing ever:</p>
 
+        <div class="grid-container">
+        <div class="item1">Menu</div>
+        <div class="item2">Main</div> 
+        <div class="item3">Menu</div>
+        </div>
 
+    </body>
 </html>
